@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * Turiknox_SitchenKink
+
+ * @category   Turiknox
+ * @package    Turiknox_SitchenKink
+ * @copyright  Copyright (c) 2017 Turiknox
+ * @license    https://github.com/Turiknox/magento2-sitchen-kink/blob/master/LICENSE.md
+ * @version    1.0.1
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="turiknox" translate="label" sortOrder="1000">
+            <label>Turiknox</label>
+        </tab>
+        <section id="sitchenkick" translate="label" type="text" sortOrder="5000" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Sitchen Kink</label>
+            <tab>turiknox</tab>
+            <resource>Turiknox_SitchenKink::config</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <field id="yesno" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Yes/No Dropdown</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="text_dependent" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Text Field dependent on Yes/No dropdown above</label>
+                    <depends>
+                        <field id="*/*/yesno">1</field>
+                    </depends>
+                </field>
+                <field id="text" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Text Field</label>
+                </field>
+                <field id="textarea" translate="label" type="textarea" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Text Area</label>
+                </field>
+                <field id="dropdown" translate="label" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Dropdown with Custom Source Model</label>
+                    <source_model>Turiknox\SitchenKink\Model\Config\Source\Dropdown</source_model>
+                </field>
+                <field id="multiselect" translate="label" type="multiselect" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Multiselect with Custom Source Model</label>
+                    <source_model>Turiknox\SitchenKink\Model\Config\Source\Dropdown</source_model>
+                    <can_be_empty>1</can_be_empty>
+                </field>
+                <field id="mapping" translate="label comment tooltip" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Mapping</label>
+                    <frontend_model>Turiknox\SitchenKink\Block\Adminhtml\System\Config\Form\Field\Mapping</frontend_model>
+                    <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
+                    <comment><![CDATA[Here's a comment]]></comment>
+                    <tooltip><![CDATA[Here's a tooltip]]></tooltip>
+                </field>
+            </group>
+            <group id="additional" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Additional</label>
+            </group>
+        </section>
+    </system>
+</config>

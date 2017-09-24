@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * Turiknox_SitchenKink
+
+ * @category   Turiknox
+ * @package    Turiknox_SitchenKink
+ * @copyright  Copyright (c) 2017 Turiknox
+ * @license    https://github.com/Turiknox/magento2-sitchen-kink/blob/master/LICENSE.md
+ * @version    1.0.1
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../lib/internal/Magento/Framework/App/etc/routes.xsd">
+    <router id="admin">
+        <route id="sitchenkink" frontName="sitchenkink">
+            <module name="Turiknox_SitchenKink" />
+        </route>
+    </router>
+</config>

@@ -1,0 +1,36 @@
+<?php
+/*
+ * Turiknox_SitchenKink
+
+ * @category   Turiknox
+ * @package    Turiknox_SitchenKink
+ * @copyright  Copyright (c) 2017 Turiknox
+ * @license    https://github.com/Turiknox/magento2-sitchen-kink/blob/master/LICENSE.md
+ * @version    1.0.1
+ */
+?>
+<div class="flexslider">
+    <ul class="slides">
+        <li>
+            <img src="http://via.placeholder.com/1200x250" alt="Image 1" />
+        </li>
+        <li>
+            <img src="http://via.placeholder.com/1200x250" alt="Image 2" />
+        </li>
+        <li>
+            <img src="http://via.placeholder.com/1200x250" alt="Image 3" />
+        </li>
+    </ul>
+</div>
+<script type="text/javascript">
+    require([
+        'jquery',
+        'flexslider'
+    ],function($){
+        $(document).ready(function() {
+            $('.flexslider').flexslider({
+                'animation': 'slide'
+            });
+        });
+    });
+</script>

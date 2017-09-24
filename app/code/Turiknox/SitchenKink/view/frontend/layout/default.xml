@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * Turiknox_SitchenKink
+
+ * @category   Turiknox
+ * @package    Turiknox_SitchenKink
+ * @copyright  Copyright (c) 2017 Turiknox
+ * @license    https://github.com/Turiknox/magento2-sitchen-kink/blob/master/LICENSE.md
+ * @version    1.0.1
+ */
+ -->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="top.links">
+            <block class="Magento\Framework\View\Element\Html\Link" name="sitchenkink.customlink" after="register-link">
+                <arguments>
+                    <argument name="class" xsi:type="string" translate="false">custom-link-click</argument>
+                    <argument name="label" xsi:type="string" translate="false">Custom Link</argument>
+                    <argument name="path" xsi:type="string" translate="false">#</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+        <referenceContainer name="before.body.end">
+            <block class="Magento\Framework\View\Element\Template" name="sitchenkink.link.js"
+                   template="Turiknox_SitchenKink::customlink/js.phtml" />
+        </referenceContainer>
+    </body>
+</page>

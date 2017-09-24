@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * Turiknox_SitchenKink
+
+ * @category   Turiknox
+ * @package    Turiknox_SitchenKink
+ * @copyright  Copyright (c) 2017 Turiknox
+ * @license    https://github.com/Turiknox/magento2-sitchen-kink/blob/master/LICENSE.md
+ * @version    1.0.1
+ */
+ -->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Turiknox_SitchenKink::css/flexslider.min.css"/>
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <block class="Magento\Framework\View\Element\Template" name="turiknox.sitchenkink.sliders"
+                   before="-" template="Turiknox_SitchenKink::sliders/sliders.phtml"/>
+        </referenceContainer>
+    </body>
+</page>

@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * Turiknox_SitchenKink
+
+ * @category   Turiknox
+ * @package    Turiknox_SitchenKink
+ * @copyright  Copyright (c) 2017 Turiknox
+ * @license    https://github.com/Turiknox/magento2-sitchen-kink/blob/master/LICENSE.md
+ * @version    1.0.1
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Turiknox_SitchenKink::main_section"
+             title="Sitchen Kink"
+             translate="title"
+             module="Turiknox_SitchenKink"
+             sortOrder="100"
+             resource="Turiknox_SitchenKink::main_section"
+        />
+        <add id="Turiknox_SitchenKink::sub_section"
+             title="Sub Section"
+             translate="title"
+             module="Turiknox_SitchenKink"
+             sortOrder="10"
+             parent="Turiknox_SitchenKink::main_section"
+             resource="Turiknox_SitchenKink::sub_section"
+        />
+        <add id="Turiknox_SitchenKink::sub_entity"
+             title="Entity"
+             translate="title"
+             module="Turiknox_SitchenKink"
+             sortOrder="10"
+             parent="Turiknox_SitchenKink::sub_section"
+             action="sitchenkink/entity"
+             resource="Turiknox_SitchenKink::sub_entity"
+        />
+        <add id="Turiknox_SitchenKink::sub_config"
+             title="Configuration"
+             translate="title"
+             module="Turiknox_SitchenKink"
+             sortOrder="10"
+             parent="Turiknox_SitchenKink::sub_section"
+             action="admin/system_config/edit/section/sitchenkick/"
+             resource="Turiknox_SitchenKink::sub_config"
+        />
+    </menu>
+</config>
